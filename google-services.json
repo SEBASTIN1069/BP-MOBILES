@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "893998529542",
+    "project_id": "bp-mobiles-hub",
+    "storage_bucket": "bp-mobiles-hub.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893998529542:android:4c26d619c2e3e49bbfd787",
+        "android_client_info": {
+          "package_name": "BP.MOBILES.HUB.COM"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTU5gdVQwp1Wqvm0rxPubBXGGdXZwBMy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
