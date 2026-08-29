@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BP Mobiles Hub — Phones, Accessories & Repairs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<meta name="description" content="New & second-hand mobile phones, genuine accessories and same-day screen repair at BP Mobiles Hub, Dindigul. EMI available, 6-month service warranty.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0B1120">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="BP Mobiles Hub — Phones, Accessories & Repairs">
+<meta property="og:description" content="New & second-hand mobile phones, genuine accessories and same-day screen repair at BP Mobiles Hub, Dindigul. EMI available, 6-month service warranty.">
+<meta property="og:image" content="logo.png">
+<meta property="og:url" content="index.html">
+<meta property="og:site_name" content="BP Mobiles Hub">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BP Mobiles Hub — Phones, Accessories & Repairs">
+<meta name="twitter:description" content="New & second-hand mobile phones, genuine accessories and same-day screen repair at BP Mobiles Hub, Dindigul. EMI available, 6-month service warranty.">
+<meta name="twitter:image" content="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="BP Mobiles Hub logo" class="brand-logo">
+      <span class="brand-text">BP<strong>MOBILES HUB</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Phones</a>
+      <a href="accessories.html">Accessories</a>
+      <a href="services.html">Repair</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="account.html" id="accountLink" class="account-link">👤 Login</a>
+    <a href="tel:+919363510957" class="call-btn">📞 Call Shop</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">Dindigul · Since day one</span>
+      <h1>Your next phone<br>is already <span class="glow">charged.</span></h1>
+      <p class="hero-sub">New &amp; second-hand mobiles, genuine accessories and same-day screen repair — all under one roof near you.</p>
+      <div class="hero-actions">
+        <a href="products.html" class="btn btn-primary">Browse Phones</a>
+        <a href="services.html" class="btn btn-ghost">Repair Pricing</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>500+</strong><span>Phones sold</span></div>
+        <div><strong>30 min</strong><span>Avg. screen repair</span></div>
+        <div><strong>6 mo</strong><span>Service warranty</span></div>
+      </div>
+    </div>
+
+    <div class="hero-device" aria-hidden="true">
+      <div class="phone-mock">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="spec-line">MODEL <span>redmi note 13</span></div>
+          <div class="spec-line">RAM <span>8 GB</span></div>
+          <div class="spec-line">STORAGE <span>128 GB</span></div>
+          <div class="spec-line">BATTERY <span>5000 mAh</span></div>
+          <div class="spec-line price">₹ 12,499</div>
+        </div>
+      </div>
+      <div class="price-tag tag-1">NEW<br>STOCK</div>
+      <div class="price-tag tag-2">EMI<br>AVAILABLE</div>
+    </div>
+  </section>
+
+  <!-- TRENDING -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Trending this week</h2>
+      <a href="products.html" class="see-all">See all phones →</a>
+    </div>
+    <div id="trendingGrid" class="product-grid"></div>
+  </section>
+
+  <!-- SECOND-HAND -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Second-hand, checked &amp; certified</h2>
+      <a href="products.html" class="see-all">See all phones →</a>
+    </div>
+    <div id="secondHandGrid" class="product-grid"></div>
+  </section>
+
+  <!-- ACCESSORIES -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Accessories</h2>
+      <a href="accessories.html" class="see-all">See all accessories →</a>
+    </div>
+    <div id="accessoryGrid" class="accessory-grid"></div>
+  </section>
+
+  <!-- SERVICES STRIP -->
+  <section class="section services-strip">
+    <div class="section-head">
+      <h2>What we do</h2>
+    </div>
+    <div class="service-cards">
+      <div class="service-card">
+        <span class="service-icon">📱</span>
+        <h3>Sales</h3>
+        <p>New &amp; certified second-hand phones across every budget.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🛠️</span>
+        <h3>Repair</h3>
+        <p>Screen, battery, charging port &amp; software fixes — while you wait.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🎧</span>
+        <h3>Accessories</h3>
+        <p>Covers, chargers, earphones &amp; tempered glass — original quality.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">💳</span>
+        <h3>EMI &amp; Exchange</h3>
+        <p>No-cost EMI on select models. Old phone exchange accepted.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <div class="cta-inner">
+      <h2>Screen cracked? Battery draining fast?</h2>
+      <p>Walk in or WhatsApp us your issue — we'll quote it in minutes.</p>
+      <a href="https://wa.me/9363510957" target="_blank" class="btn btn-primary">Chat on WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="BP Mobiles Hub logo" class="footer-logo">
+      <div>
+        <span class="brand-text">BP<strong>MOBILES HUB</strong></span>
+        <p>Mobiles · Accessories · Repairs — Dindigul</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="products.html">Phones</a>
+      <a href="services.html">Repair</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <p class="footer-note">BP Mobiles Hub. Built with care. <a href="admin.html" class="admin-footer-link">Admin</a></p>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-storage-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
