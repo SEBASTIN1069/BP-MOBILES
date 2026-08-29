@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — BP Mobiles Hub</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta name="theme-color" content="#0B1120">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="BP Mobiles Hub logo" class="brand-logo">
+      <span class="brand-text">BP<strong>MOBILES HUB</strong></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">← Back to site</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="loginScreen">
+    <div class="auth-card" style="max-width:420px;margin:0 auto;">
+      <h1>Admin login</h1>
+      <p class="auth-sub">Only the shop owner should sign in here.</p>
+      <form class="auth-form" id="adminLoginForm">
+        <label>Email
+          <input type="email" name="email" required autocomplete="username">
+        </label>
+        <label>Password
+          <input type="password" name="password" required autocomplete="current-password">
+        </label>
+        <p class="auth-error" id="adminLoginError" hidden></p>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section admin-dashboard" id="dashboard" hidden>
+    <div class="admin-topbar">
+      <p>Logged in as <strong id="adminEmailLabel"></strong></p>
+      <button type="button" class="btn btn-ghost btn-sm" id="adminLogoutBtn">Log out</button>
+    </div>
+
+    <!-- ===== PHONES ===== -->
+    <div class="admin-block">
+      <h2 id="productFormTitle">Add a new phone</h2>
+      <form class="admin-form" id="productForm">
+        <div class="admin-form-grid">
+          <label>Brand
+            <select name="brand" required>
+              <option value="Redmi">Redmi</option>
+              <option value="Realme">Realme</option>
+              <option value="Oppo">Oppo</option>
+              <option value="Samsung">Samsung</option>
+              <option value="Vivo">Vivo</option>
+              <option value="Tecno">Tecno</option>
+              <option value="iQOO">iQOO</option>
+              <option value="Apple">Apple</option>
+              <option value="Lava">Lava</option>
+              <option value="Itel">Itel</option>
+              <option value="Gfive">Gfive</option>
+              <option value="Nokia">Nokia</option>
+              <option value="Nothing">Nothing</option>
+              <option value="Google Pixel">Google Pixel</option>
+              <option value="Honor">Honor</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label>Model name
+            <input type="text" name="name" placeholder="e.g. Redmi Note 13" required>
+          </label>
+          <label>RAM
+            <input type="text" name="ram" placeholder="e.g. 8GB" required>
+          </label>
+          <label>Storage
+            <input type="text" name="storage" placeholder="e.g. 128GB" required>
+          </label>
+          <label>Battery
+            <input type="text" name="battery" placeholder="e.g. 5000mAh" required>
+          </label>
+          <label>Price (₹)
+            <input type="number" name="price" min="0" step="1" required>
+          </label>
+          <label>Stock
+            <select name="stock" required>
+              <option value="in">In stock</option>
+              <option value="low">Only 2 left</option>
+            </select>
+          </label>
+          <label>Condition
+            <select name="condition" required>
+              <option value="New">New</option>
+              <option value="Second-hand">Second-hand</option>
+            </select>
+          </label>
+        </div>
+        <label>Description (any other details about the phone — condition notes, box/bill, accessories included, etc.)
+          <textarea name="description" rows="4" placeholder="e.g. Used for 6 months, no scratches, box and charger included, single owner…"></textarea>
+        </label>
+        <label>Photos (first one becomes the main photo — leave empty to keep existing photos when editing)
+          <input type="file" name="images" accept="image/*" multiple>
+        </label>
+        <p class="admin-form-status" id="productFormStatus" hidden></p>
+        <div class="admin-form-actions">
+          <button type="submit" class="btn btn-primary">Save phone</button>
+          <button type="button" class="btn btn-ghost" id="cancelProductEdit" hidden>Cancel edit</button>
+        </div>
+      </form>
+
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="productTable">
+          <thead><tr><th>Photo</th><th>Phone</th><th>Condition</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead>
+          <tbody><tr><td colspan="6">Loading…</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ===== ACCESSORIES ===== -->
+    <div class="admin-block">
+      <h2 id="accessoryFormTitle">Add a new accessory</h2>
+      <form class="admin-form" id="accessoryForm">
+        <div class="admin-form-grid">
+          <label>Category
+            <input type="text" name="category" placeholder="e.g. Charger" required>
+          </label>
+          <label>Name
+            <input type="text" name="name" placeholder="e.g. 33W Fast Charger" required>
+          </label>
+          <label>Price (₹)
+            <input type="number" name="price" min="0" step="1" required>
+          </label>
+          <label>Emoji icon (used if no photo, e.g. 🔌)
+            <input type="text" name="icon" placeholder="🔌" maxlength="4">
+          </label>
+        </div>
+        <label>Photos (first one becomes the main photo — leave empty to keep existing photos when editing, or to use the emoji icon)
+          <input type="file" name="images" accept="image/*" multiple>
+        </label>
+        <p class="admin-form-status" id="accessoryFormStatus" hidden></p>
+        <div class="admin-form-actions">
+          <button type="submit" class="btn btn-primary">Save accessory</button>
+          <button type="button" class="btn btn-ghost" id="cancelAccessoryEdit" hidden>Cancel edit</button>
+        </div>
+      </form>
+
+      <div class="admin-table-wrap">
+        <table class="admin-table" id="accessoryTable">
+          <thead><tr><th>Photo</th><th>Accessory</th><th>Price</th><th>Actions</th></tr></thead>
+          <tbody><tr><td colspan="4">Loading…</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="footer-note">BP Mobiles Hub — Admin panel.</p>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-storage-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
