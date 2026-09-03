@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessories — BP Mobiles Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<meta name="description" content="Browse phone accessories at BP Mobiles Hub, Dindigul — covers, airbuds, chargers, Bluetooth speakers and more.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0B1120">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Accessories — BP Mobiles Hub">
+<meta property="og:description" content="Browse phone accessories at BP Mobiles Hub, Dindigul — covers, airbuds, chargers, Bluetooth speakers and more.">
+<meta property="og:image" content="logo.png">
+<meta property="og:url" content="accessories.html">
+<meta property="og:site_name" content="BP Mobiles Hub">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Accessories — BP Mobiles Hub">
+<meta name="twitter:description" content="Browse phone accessories at BP Mobiles Hub, Dindigul — covers, airbuds, chargers, Bluetooth speakers and more.">
+<meta name="twitter:image" content="logo.png">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="BP Mobiles Hub logo" class="brand-logo">
+      <span class="brand-text">BP<strong>MOBILES HUB</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Phones</a>
+      <a href="laptops.html">Laptops</a>
+      <a href="accessories.html" class="active">Accessories</a>
+      <a href="services.html">Repair</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="account.html" id="accountLink" class="account-link">👤 Login</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme"><span class="theme-toggle-knob"></span></button>
+    <a href="tel:+919363510957" class="call-btn">📞 Call Shop</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <span class="eyebrow">Covers · Airbuds · Chargers · Speakers</span>
+    <h1>Accessories</h1>
+    <p>Genuine accessories for every phone — search by phone model or item type.</p>
+  </section>
+
+  <section class="section" id="accessories">
+    <div class="filter-bar">
+      <input type="text" id="accessorySearchInput" placeholder="Search accessories… e.g. Redmi Note 12 5G Cover">
+    </div>
+
+    <div class="accessory-block" id="airbudsBlock" hidden>
+      <h3 class="accessory-block-title">Airbuds &amp; Earphones</h3>
+      <div id="accessoryGridAirbuds" class="accessory-grid"></div>
+    </div>
+
+    <div class="accessory-block" id="chargerBlock" hidden>
+      <h3 class="accessory-block-title">Chargers</h3>
+      <div id="accessoryGridCharger" class="accessory-grid"></div>
+    </div>
+
+    <div class="accessory-block" id="coverBlock" hidden>
+      <h3 class="accessory-block-title">Covers</h3>
+      <div id="accessoryGridCover" class="accessory-grid"></div>
+    </div>
+
+    <div class="accessory-block" id="speakerBlock" hidden>
+      <h3 class="accessory-block-title">Bluetooth Speakers</h3>
+      <div id="accessoryGridSpeaker" class="accessory-grid"></div>
+    </div>
+
+    <div class="accessory-block" id="otherAccessoryBlock" hidden>
+      <h3 class="accessory-block-title">Other Accessories</h3>
+      <div id="accessoryGridOther" class="accessory-grid"></div>
+    </div>
+
+    <p id="accessoryEmptyState" class="empty-state" hidden>No accessories found — try a different search.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="BP Mobiles Hub logo" class="footer-logo">
+      <div>
+        <span class="brand-text">BP<strong>MOBILES HUB</strong></span>
+        <p>Mobiles · Accessories · Repairs — Dindigul</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="products.html">Phones</a>
+      <a href="laptops.html">Laptops</a>
+      <a href="services.html">Repair</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <p class="footer-note">BP Mobiles Hub. Built with care. <a href="admin.html" class="admin-footer-link">Admin</a></p>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-storage-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
